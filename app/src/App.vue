@@ -27,6 +27,10 @@ onBeforeUpdate(() => {
     }
 });
 
+const onButtonClickEvent = () => {
+  alert("Dein Computer wurde gekackt!")
+};
+
 </script>
 
 <template>
@@ -60,7 +64,7 @@ onBeforeUpdate(() => {
             </div>
         </div>
         <div class="button-section">
-            <button :class="{ 'button-opend': !buttonDisabled, 'button-closed': buttonDisabled }" type="submit" :disabled="buttonDisabled" name="apply">Bewerben</button>
+            <button :class="{ 'button-opend': !buttonDisabled, 'button-closed': buttonDisabled }" type="submit" :disabled="buttonDisabled" name="apply" @click="onButtonClickEvent">Bewerben</button>
         </div>
     </div>
 </template>
